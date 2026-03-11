@@ -28,7 +28,7 @@
 
     <!-- CSS Links -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
 
     <!-- Modern Arabic Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,19 +55,23 @@
                 </div>
             </div>
 
-            <div class="header-actions">
-                <button id="langToggleBtn" class="lang-btn" data-i18n="toggleLangBtn">English</button>
-                <button id="mobileMenuBtn" class="mobile-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+            <div class="header-nav-actions">
+                <nav id="navLinks" class="nav-links">
+                    <a href="#home" data-i18n="navHome">الرئيسية</a>
+                    <a href="#offers" data-i18n="navOffers">العروض</a>
+                    <a href="#services" data-i18n="navServices">الخدمات</a>
+                    <a href="#products" data-i18n="navProducts">منتجاتنا</a>
+                </nav>
 
-            <nav id="navLinks" class="nav-links">
-                <a href="#home" data-i18n="navHome">الرئيسية</a>
-                <a href="#offers" data-i18n="navOffers">العروض</a>
-                <a href="#services" data-i18n="navServices">الخدمات</a>
-                <a href="#products" data-i18n="navProducts">منتجاتنا</a>
-            </nav>
+                <div class="header-actions">
+                    <button id="langToggleBtn" class="lang-btn">
+                        <i class="fas fa-globe"></i> <span data-i18n="toggleLangBtn">English</span>
+                    </button>
+                    <button id="mobileMenuBtn" class="mobile-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -333,7 +337,7 @@
     </footer>
 
     <!-- External JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=2"></script>
 </body>
 
 </html>
