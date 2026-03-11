@@ -8,6 +8,7 @@ A premium, modern, and completely responsive Arabic barber salon landing page bu
 *   **Fully Responsive:** The layout is thoroughly optimized for all device sizes. Mobile views include a sleek hamburger menu interaction and a streamlined single-column layout stack.
 *   **Modern Typography:** Uses the 'Tajawal' Arabic Google font for professional, clean, and highly readable modern Arabic text.
 *   **Interactive UI/UX:**
+    *   **Multi-language Support (Ar/En):** A custom i18n dictionary system paired with dynamic DOM `dir` switching ensures layout and text seamlessly flip between Left-To-Right (English) and Right-To-Left (Arabic).
     *   **Animated Splash Screen:** A beautiful pulse-animated loading screen featuring the salon's logo when users first load the page.
     *   **Hero Slider:** Smooth fading JavaScript image slider to showcase the salon's interior.
     *   **Floating WhatsApp Integration:** A persistent button for immediate booking and customer inquiries.

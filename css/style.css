@@ -26,6 +26,11 @@ body {
     /* Initial state for splash screen, script handles unlocking */
 }
 
+/* Base adjustment for LTR english text if needed */
+html[dir="ltr"] body {
+    /* Optional: English override if needed, Tajawal handles EN well too */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -34,7 +39,7 @@ html {
 #splash-screen {
     position: fixed;
     top: 0;
-    left: 0;
+    inset-inline-start: 0;
     width: 100vw;
     height: 100vh;
     background-color: var(--bg-main);
@@ -71,7 +76,7 @@ html {
     content: '';
     box-sizing: border-box;
     position: absolute;
-    left: 50%;
+    inset-inline-start: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 40px;
@@ -156,6 +161,31 @@ header {
     color: var(--text-muted);
 }
 
+/* Header Actions (Language & Mobile Toggle) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lang-btn {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.lang-btn:hover {
+    background: var(--gold);
+    color: var(--bg-main);
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -175,7 +205,7 @@ header {
     width: 0;
     height: 2px;
     bottom: -5px;
-    left: 0;
+    inset-inline-start: 0;
     background-color: var(--gold);
     transition: var(--transition);
 }
@@ -262,11 +292,19 @@ header {
 }
 
 .slider-btn.prev {
-    left: 1rem;
+    inset-inline-start: 1rem;
 }
 
 .slider-btn.next {
-    right: 1rem;
+    inset-inline-end: 1rem;
+}
+
+html[dir="ltr"] .slider-btn.prev i {
+    transform: rotate(180deg);
+}
+
+html[dir="ltr"] .slider-btn.next i {
+    transform: rotate(180deg);
 }
 
 /* Section Titles */
@@ -283,11 +321,21 @@ header {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
+    inset-inline-start: 50%;
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
     background-color: var(--gold);
+}
+
+html[dir="ltr"] .section-title::after {
+    transform: translateX(-50%);
+    /* translate is independent of RTL/LTR usually if 50% left, but wait: inset-inline-start flips. */
+}
+
+html[dir="rtl"] .section-title::after {
+    transform: translateX(50%);
+    /* In RTL, inset-inline-start is right. So translating 50% right is positive X */
 }
 
 /* Services */
@@ -357,7 +405,6 @@ header {
 /* Products */
 .products-section {
     padding-bottom: 4rem;
-    /* Products are now fully shown with layout navigation rather than display toggle */
 }
 
 .products-grid {
@@ -462,6 +509,10 @@ header {
     box-shadow: 5px 5px 20px rgba(212, 175, 55, 0.1);
 }
 
+html[dir="ltr"] .offer-card:hover {
+    transform: translateX(10px);
+}
+
 .offer-icon {
     width: 80px;
     height: 80px;
@@ -505,7 +556,7 @@ header {
     display: none;
     position: fixed;
     top: 0;
-    left: 0;
+    inset-inline-start: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
@@ -529,7 +580,7 @@ header {
 .modal-close {
     position: absolute;
     top: 2rem;
-    right: 2rem;
+    inset-inline-end: 2rem;
     color: white;
     font-size: 3rem;
     cursor: pointer;
@@ -544,8 +595,7 @@ header {
 .scroll-to-top {
     position: fixed;
     bottom: 2rem;
-    left: 2rem;
-    /* moved to left because WhatsApp will be on right */
+    inset-inline-start: 2rem;
     width: 50px;
     height: 50px;
     background: var(--gold);
@@ -581,7 +631,7 @@ header {
 .whatsapp-float {
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    inset-inline-end: 2rem;
     width: 60px;
     height: 60px;
     background-color: var(--whatsapp-color);
@@ -690,7 +740,7 @@ footer {
         flex-direction: column;
         position: absolute;
         top: 100%;
-        left: 0;
+        inset-inline-start: 0;
         width: 100%;
         background: rgba(10, 10, 10, 0.98);
         padding: 2rem;
@@ -756,7 +806,7 @@ footer {
 
     .scroll-to-top {
         bottom: 1.5rem;
-        left: 1.5rem;
+        inset-inline-start: 1.5rem;
         width: 45px;
         height: 45px;
         font-size: 1.2rem;
@@ -764,7 +814,7 @@ footer {
 
     .whatsapp-float {
         bottom: 1.5rem;
-        right: 1.5rem;
+        inset-inline-end: 1.5rem;
         width: 50px;
         height: 50px;
         font-size: 1.5rem;
@@ -772,6 +822,24 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .header-actions {
+        gap: 0.5rem;
+    }
+
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-container img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .lang-btn {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
     .hero {
         padding: 2rem 0.5rem;
     }

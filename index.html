@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>صالون كتيبة - Salon Kotaiba</title>
+    <title data-i18n="pageTitle">صالون كتيبة - Salon Kotaiba</title>
 
     <meta name="description"
         content="صالون كتيبة يقدم أفضل خدمات الحلاقة والعناية الرجالية. احجز موعدك الآن للحصول على تجربة فريدة في الحلاقة والعناية بالشعر.">
@@ -50,20 +50,23 @@
             <div class="logo-container">
                 <img src="assets/images/logo.jpeg" alt="شعار صالون Kotaiba">
                 <div class="logo-text">
-                    <h1>Kotaiba Salon</h1>
-                    <p>صالون الحلاقة الراقي</p>
+                    <h1 data-i18n="logoTitle">Kotaiba Salon</h1>
+                    <p data-i18n="logoDesc">صالون الحلاقة الراقي</p>
                 </div>
             </div>
 
-            <button id="mobileMenuBtn" class="mobile-btn">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="header-actions">
+                <button id="langToggleBtn" class="lang-btn" data-i18n="toggleLangBtn">English</button>
+                <button id="mobileMenuBtn" class="mobile-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
 
             <nav id="navLinks" class="nav-links">
-                <a href="#home">الرئيسية</a>
-                <a href="#offers">العروض</a>
-                <a href="#services">الخدمات</a>
-                <a href="#products">منتجاتنا</a>
+                <a href="#home" data-i18n="navHome">الرئيسية</a>
+                <a href="#offers" data-i18n="navOffers">العروض</a>
+                <a href="#services" data-i18n="navServices">الخدمات</a>
+                <a href="#products" data-i18n="navProducts">منتجاتنا</a>
             </nav>
         </div>
     </header>
@@ -72,8 +75,8 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h2>مرحباً بكم في صالون Kotaiba</h2>
-                <p>نقدم لكم أفضل خدمات الحلاقة والعناية بالشعر والبشرة</p>
+                <h2 data-i18n="heroTitle">مرحباً بكم في صالون Kotaiba</h2>
+                <p data-i18n="heroDesc">نقدم لكم أفضل خدمات الحلاقة والعناية بالشعر والبشرة</p>
 
                 <div class="slider-container">
                     <img class="slide active" src="assets/images/wel.webp" alt="Welcome Image">
@@ -94,48 +97,49 @@
 
         <!-- Services Section -->
         <section id="services" class="container services-section">
-            <h3 class="section-title">خدماتنا المميزة</h3>
+            <h3 class="section-title" data-i18n="servicesSectionTitle">خدماتنا المميزة</h3>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="assets/images/kota.jpeg" alt="خدمة الحلاقة">
                     </div>
-                    <h4>خدمة الحلاقة</h4>
-                    <p>حلاقة احترافية بأحدث التقنيات والأدوات المعقمة. نقدم قصات عصرية وكلاسيكية تناسب جميع الأذواق
-                        والأعمار مع الاهتمام بأدق التفاصيل.</p>
+                    <h4 data-i18n="srv1Title">خدمة الحلاقة</h4>
+                    <p data-i18n="srv1Desc">حلاقة احترافية بأحدث التقنيات والأدوات المعقمة. نقدم قصات عصرية وكلاسيكية
+                        تناسب جميع الأذواق والأعمار مع الاهتمام بأدق التفاصيل.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon" style="background: rgba(212,175,55,0.1); border: 2px solid var(--gold);">
                         <i class="fas fa-user-check"></i>
                     </div>
-                    <h4>تنظيف البشرة</h4>
-                    <p>تنظيف عميق للبشرة لإزالة الشوائب والرؤوس السوداء. جلسة مريحة ومنعشة تترك البشرة نظيفة ومشرقة مع
-                        استخدام تقنيات حديثة وآمنة.</p>
+                    <h4 data-i18n="srv2Title">تنظيف البشرة</h4>
+                    <p data-i18n="srv2Desc">تنظيف عميق للبشرة لإزالة الشوائب والرؤوس السوداء. جلسة مريحة ومنعشة تترك
+                        البشرة نظيفة ومشرقة مع استخدام تقنيات حديثة وآمنة.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="assets/images/Has.jpeg" alt="غسيل الشعر">
                     </div>
-                    <h4>غسيل الشعر</h4>
-                    <p>غسيل احترافي للشعر بشامبو مخصص حسب نوع الشعر مع تدليك مريح لفروة الرأس. خدمة منعشة تترك الشعر
-                        نظيفاً وصحياً ورائحة جميلة.</p>
+                    <h4 data-i18n="srv3Title">غسيل الشعر</h4>
+                    <p data-i18n="srv3Desc">غسيل احترافي للشعر بشامبو مخصص حسب نوع الشعر مع تدليك مريح لفروة الرأس. خدمة
+                        منعشة تترك الشعر نظيفاً وصحياً ورائحة جميلة.</p>
                 </div>
             </div>
         </section>
 
         <!-- Offers Section -->
         <section id="offers" class="container offers-section">
-            <h3 class="section-title">عروضنا الخاصة</h3>
+            <h3 class="section-title" data-i18n="offersSectionTitle">عروضنا الخاصة</h3>
             <div class="offers-grid">
                 <div class="offer-card">
                     <div class="offer-icon">
                         <i class="fas fa-scissors"></i>
                     </div>
                     <div class="offer-details">
-                        <h4>حلاقة شعر ولحية</h4>
-                        <p>عرض مميز يشمل حلاقة الشعر وتهذيب اللحية بأسلوب احترافي. خدمة شاملة بسعر مناسب.</p>
+                        <h4 data-i18n="off1Title">حلاقة شعر ولحية</h4>
+                        <p data-i18n="off1Desc">عرض مميز يشمل حلاقة الشعر وتهذيب اللحية بأسلوب احترافي. خدمة شاملة بسعر
+                            مناسب.</p>
                     </div>
                 </div>
 
@@ -144,8 +148,9 @@
                         <i class="fas fa-magic"></i>
                     </div>
                     <div class="offer-details">
-                        <h4>حلاقة مع تنظيف البشرة</h4>
-                        <p>باقة متكاملة تشمل الحلاقة وجلسة تنظيف عميق للبشرة. تجربة فاخرة للعناية الشاملة.</p>
+                        <h4 data-i18n="off2Title">حلاقة مع تنظيف البشرة</h4>
+                        <p data-i18n="off2Desc">باقة متكاملة تشمل الحلاقة وجلسة تنظيف عميق للبشرة. تجربة فاخرة للعناية
+                            الشاملة.</p>
                     </div>
                 </div>
 
@@ -154,10 +159,10 @@
                         <i class="fas fa-crown"></i>
                     </div>
                     <div class="offer-details">
-                        <h4>الباقة الملكية الكاملة</h4>
-                        <p>تجربة فاخرة شاملة: حلاقة + تهذيب لحية + غسيل شعر + تنظيف بشرة + ماسك. كل ما تحتاجه في جلسة
-                            واحدة.</p>
-                        <div class="offer-price">50 بدلا من 75 VIP</div>
+                        <h4 data-i18n="off3Title">الباقة الملكية الكاملة</h4>
+                        <p data-i18n="off3Desc">تجربة فاخرة شاملة: حلاقة + تهذيب لحية + غسيل شعر + تنظيف بشرة + ماسك. كل
+                            ما تحتاجه في جلسة واحدة.</p>
+                        <div class="offer-price" data-i18n="off3Price">50 بدلا من 75 VIP</div>
                     </div>
                 </div>
             </div>
@@ -165,7 +170,7 @@
 
         <!-- Products Section -->
         <section id="products" class="container products-section">
-            <h3 class="section-title">منتجاتنا المميزة</h3>
+            <h3 class="section-title" data-i18n="prodSectionTitle">منتجاتنا المميزة</h3>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-img" onclick="openImage(this.querySelector('img').src)">
@@ -173,10 +178,11 @@
                     </div>
                     <div class="product-info">
                         <div>
-                            <h4>ماكينة حلاقة VGR V-393 (2 في 1)</h4>
-                            <p>مقاومة للماء، قابلة للشحن، مع رؤوس متعددة وحلاقة دقيقة وسهلة الاستخدام.</p>
+                            <h4 data-i18n="prod1Title">ماكينة حلاقة VGR V-393 (2 في 1)</h4>
+                            <p data-i18n="prod1Desc">مقاومة للماء، قابلة للشحن، مع رؤوس متعددة وحلاقة دقيقة وسهلة
+                                الاستخدام.</p>
                         </div>
-                        <div class="product-price">15 JD</div>
+                        <div class="product-price" data-i18n="prod1Price">15 JD</div>
                     </div>
                 </div>
 
@@ -186,10 +192,11 @@
                     </div>
                     <div class="product-info">
                         <div>
-                            <h4>VGR V-989</h4>
-                            <p>ماكينة احترافية تعمل سلكياً ولاسلكياً، شاشة LED، وضع تيربو، بطارية تدوم 180 دقيقة.</p>
+                            <h4 data-i18n="prod2Title">VGR V-989</h4>
+                            <p data-i18n="prod2Desc">ماكينة احترافية تعمل سلكياً ولاسلكياً، شاشة LED، وضع تيربو، بطارية
+                                تدوم 180 دقيقة.</p>
                         </div>
-                        <div class="product-price">15 JD</div>
+                        <div class="product-price" data-i18n="prod2Price">15 JD</div>
                     </div>
                 </div>
 
@@ -199,10 +206,10 @@
                     </div>
                     <div class="product-info">
                         <div>
-                            <h4>واكس بلاست سبايدر</h4>
-                            <p>ثبات قوي ولمعان طبيعي لشعر أنيق طوال اليوم.</p>
+                            <h4 data-i18n="prod3Title">واكس بلاست سبايدر</h4>
+                            <p data-i18n="prod3Desc">ثبات قوي ولمعان طبيعي لشعر أنيق طوال اليوم.</p>
                         </div>
-                        <div class="product-price">3 JD</div>
+                        <div class="product-price" data-i18n="prod3Price">3 JD</div>
                     </div>
                 </div>
 
@@ -212,10 +219,10 @@
                     </div>
                     <div class="product-info">
                         <div>
-                            <h4>ENERGY Original Hair Cream</h4>
-                            <p>لمعان طبيعي وثبات مثالي لتصفيف يدوم طويلاً.</p>
+                            <h4 data-i18n="prod4Title">ENERGY Original Hair Cream</h4>
+                            <p data-i18n="prod4Desc">لمعان طبيعي وثبات مثالي لتصفيف يدوم طويلاً.</p>
                         </div>
-                        <div class="product-price">3 JD</div>
+                        <div class="product-price" data-i18n="prod4Price">3 JD</div>
                     </div>
                 </div>
 
@@ -225,10 +232,10 @@
                     </div>
                     <div class="product-info">
                         <div>
-                            <h4>Geemy</h4>
-                            <p>ماكينة حلاقة شعر الانف والاذن (مقاومة للماء).</p>
+                            <h4 data-i18n="prod5Title">Geemy</h4>
+                            <p data-i18n="prod5Desc">ماكينة حلاقة شعر الانف والاذن (مقاومة للماء).</p>
                         </div>
-                        <div class="product-price">6 JD</div>
+                        <div class="product-price" data-i18n="prod5Price">6 JD</div>
                     </div>
                 </div>
 
@@ -238,10 +245,10 @@
                     </div>
                     <div class="product-info">
                         <div>
-                            <h4>💈ELEGANCE Matte Wax</h4>
-                            <p>واكس لتثبيت الشعر دون لمعان.</p>
+                            <h4 data-i18n="prod6Title">💈ELEGANCE Matte Wax</h4>
+                            <p data-i18n="prod6Desc">واكس لتثبيت الشعر دون لمعان.</p>
                         </div>
-                        <div class="product-price">3 JD</div>
+                        <div class="product-price" data-i18n="prod6Price">3 JD</div>
                     </div>
                 </div>
 
@@ -251,10 +258,10 @@
                     </div>
                     <div class="product-info">
                         <div>
-                            <h4>Elegance Splash Body Spray</h4>
-                            <p>عطر جسم منعش برائحة مميزة تدوم طويلاً.</p>
+                            <h4 data-i18n="prod7Title">Elegance Splash Body Spray</h4>
+                            <p data-i18n="prod7Desc">عطر جسم منعش برائحة مميزة تدوم طويلاً.</p>
                         </div>
-                        <div class="product-price">5 JD</div>
+                        <div class="product-price" data-i18n="prod7Price">5 JD</div>
                     </div>
                 </div>
 
@@ -264,10 +271,11 @@
                     </div>
                     <div class="product-info">
                         <div>
-                            <h4>💈ELEGANCE Gel</h4>
-                            <p>جل لتثبيت الشعر مدعم بالفيتامينات لعناية إضافية وحماية من الجفاف.</p>
+                            <h4 data-i18n="prod8Title">💈ELEGANCE Gel</h4>
+                            <p data-i18n="prod8Desc">جل لتثبيت الشعر مدعم بالفيتامينات لعناية إضافية وحماية من الجفاف.
+                            </p>
                         </div>
-                        <div class="product-price">3 JD</div>
+                        <div class="product-price" data-i18n="prod8Price">3 JD</div>
                     </div>
                 </div>
             </div>
@@ -281,12 +289,13 @@
     </div>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="scroll-to-top" title="العودة للأعلى">
+    <button id="scrollToTopBtn" class="scroll-to-top" data-i18n="scrollToTopTitle" title="العودة للأعلى">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/962796519748" target="_blank" class="whatsapp-float" title="تواصل معنا عبر واتساب">
+    <a href="https://wa.me/962796519748" target="_blank" class="whatsapp-float" data-i18n="whatsappTitle"
+        title="تواصل معنا عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -294,15 +303,15 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
-                <h3>معلومات الاتصال</h3>
+                <h3 data-i18n="footerContact">معلومات الاتصال</h3>
                 <p><i class="fas fa-phone"></i> 0796519748</p>
                 <p><i class="fas fa-phone"></i> 065921656</p>
                 <p><i class="fas fa-globe"></i> <a href="https://maps.app.goo.gl/DBntfCb467PaEFAE7?g_st=ipc"
-                        target="_blank">موقعنا على الخريطة</a></p>
+                        target="_blank" data-i18n="footerMap">موقعنا على الخريطة</a></p>
             </div>
 
             <div class="footer-section">
-                <h3>تابعنا على</h3>
+                <h3 data-i18n="footerFollow">تابعنا على</h3>
                 <div class="social-links">
                     <a href="https://instagram.com/kotaibasalon?igsh=MWNlN29sOTI4YmttZA==" target="_blank"><i
                             class="fab fa-instagram"></i></a>
@@ -313,11 +322,12 @@
             </div>
 
             <div class="footer-section">
-                <h3>صالون Kotaiba</h3>
-                <p style="gap:0;">نقدم أفضل خدمات الحلاقة والعناية بالشعر بأحدث التقنيات والأساليب العصرية.</p>
+                <h3 data-i18n="footerAbout">صالون Kotaiba</h3>
+                <p style="gap:0;" data-i18n="footerDesc">نقدم أفضل خدمات الحلاقة والعناية بالشعر بأحدث التقنيات
+                    والأساليب العصرية.</p>
             </div>
         </div>
-        <div class="copyright">
+        <div class="copyright" data-i18n="footerCopy">
             2025 © Kotaiba Salon. All rights reserved.
         </div>
     </footer>
